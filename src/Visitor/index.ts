@@ -1,0 +1,1 @@
+/** https://refactoring.guru/pl/design-patterns/visitor */
