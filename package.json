@@ -1,0 +1,16 @@
+{
+  "name": "designpattersintypescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "it": "tsc && node build/index.js"
+  },
+  "author": "",
+  "license": ""
+}

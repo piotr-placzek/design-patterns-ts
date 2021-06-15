@@ -1,0 +1,1 @@
+My examples of design patterns described at [https://refactoring.guru/](https://refactoring.guru/) written in Typescript.
