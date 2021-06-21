@@ -1,5 +1,5 @@
 
-/** Factory Method */
+/** Factory Method+ */
 import { Logistics, RoadLogistics, SeaLogistics, Transport } from "./FactoryMethod";
 
 function factoryMethodClient(method: Logistics): Transport {
@@ -28,7 +28,7 @@ abstractFactoryClient(new VictorianFurnitureFactory());
 abstractFactoryClient(new ModernFurnitureFactory());
 abstractFactoryClient(new ArtDecoFurnitureFactory());
 
-/** Builder */
+/** Builder+ */
 import { Director, HtmlTextDocumentBuilder, PlainTextDocumentBuilder } from "./Builder";
 
 const plainTextBuilder = new PlainTextDocumentBuilder();
@@ -37,14 +37,14 @@ const plainTextDocument = new Director().createExampleDocument(plainTextBuilder)
 const htmlTextBuilder = new HtmlTextDocumentBuilder();
 const htmlTextDocument = new Director().createExampleDocument(htmlTextBuilder).text();
 
-/** Prototype */
+/** Prototype+ */
 import { Android } from "./Prototype";
 
 const android_1 = new Android(["CPU 3.0", "MEM 32GB"], ["main.cpp"]);
 const android_2 = android_1.clone();
 android_2.software.push("LIB: IMPOSTOR")
 
-/** Singleton */
+/** Singleton+ */
 import { Singleton } from "./Singleton";
 
 const singletonInstance_1 = Singleton.getInstance();
@@ -58,7 +58,7 @@ const equal = (singletonInstance_1 === singletonInstance_2);
 /** Bridge+ */
 /** Composite */
 
-/** Decorator+ */
+/** Decorators+ */
 import { Matrix, Vector, MutipliedValueGetterMatrixDecorator } from "./Decorator";
 
 const vs: number = 3;
