@@ -15,6 +15,22 @@
     "prototype": "tsc src/Prototype/index.ts --lib es2015,dom && node src/Prototype/index.js",
     "singleton": "tsc src/Singleton/index.ts --lib es2015,dom && node src/Singleton/index.js",
     "decorator": "tsc src/Decorator/index.ts --lib es2015,dom && node src/Decorator/index.js",
-    "flyweight": "tsc src/Flyweight/index.ts --lib es2015,dom && node src/Flyweight/index.js"
+    "flyweight": "tsc src/Flyweight/index.ts --lib es2015,dom && node src/Flyweight/index.js",
+    "bridge": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "proxy": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "chain-of-responsibility": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "iterator": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "observer": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "command": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "strategy": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "visitor": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+
+    "adapter": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "composite": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "facade": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "mediator": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "memento": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "state": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "template-method": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js"
   }
 }
