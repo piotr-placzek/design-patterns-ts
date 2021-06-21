@@ -59,13 +59,18 @@ const equal = (singletonInstance_1 === singletonInstance_2);
 /** Composite */
 
 /** Decorators+ */
-import { Matrix, Vector, MutipliedValueGetterMatrixDecorator } from "./Decorator";
+import { Matrix, Vector, MutipliedValueGetterMatrixDecorator, UniversalMatrixDecorator } from "./Decorator";
 
 const vs: number = 3;
 let vector: Matrix = new Vector(vs);
 for (let v = 0; v < vs; v++) vector.set(v, 0, v);
-vector = new MutipliedValueGetterMatrixDecorator(3, vector);
-
+const mdec = new MutipliedValueGetterMatrixDecorator(3, vector);
+const udec = new UniversalMatrixDecorator(vector);
+udec.setGetFunc(
+    (x: number, y:number): number => {
+        return udec.source().get(x, y) -1;
+    }
+)
 
 /** Facade */
 /** Flyweight+ */

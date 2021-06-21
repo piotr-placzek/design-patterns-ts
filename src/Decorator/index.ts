@@ -93,6 +93,10 @@ export class MatrixDecorator implements Matrix {
         printHelper(this);
     }
 
+    source(): Matrix {
+        return this.src;
+    }
+
 }
 
 export class MutipliedValueGetterMatrixDecorator extends MatrixDecorator{
@@ -105,4 +109,23 @@ export class MutipliedValueGetterMatrixDecorator extends MatrixDecorator{
         return this.src.get(x, y) * this.mult;
     }
 
+}
+
+type UMD_GetFunc = (x: number, y: number) => number;
+
+export class UniversalMatrixDecorator extends MatrixDecorator {
+
+    setGetFunc(fn: UMD_GetFunc) {
+        this.getFunc = fn;
+    }
+
+    get(x: number, y: number): number {
+        return this.getFunc(x, y);
+    }
+    
+    print(): void {
+        printHelper(this);
+    }
+
+    private getFunc: UMD_GetFunc;
 }
