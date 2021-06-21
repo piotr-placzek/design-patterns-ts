@@ -58,7 +58,7 @@ const equal = (singletonInstance_1 === singletonInstance_2);
 /** Bridge+ */
 /** Composite */
 
-/** Decorators+ */
+/** Decorator+ */
 import { Matrix, Vector, MutipliedValueGetterMatrixDecorator, UniversalMatrixDecorator } from "./Decorator";
 
 const vs: number = 3;
