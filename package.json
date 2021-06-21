@@ -1,16 +1,20 @@
 {
   "name": "designpattersintypescript",
-  "version": "1.0.0",
-  "main": "index.js",
-  "dependencies": {},
+  "author": "Piotr Płaczek",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piotr-placzek/design-patterns-ts.git"
+  },
   "devDependencies": {
     "typescript": "^4.3.2"
   },
   "scripts": {
-    "build": "tsc",
-    "start": "node build/index.js",
-    "it": "tsc && node build/index.js"
-  },
-  "author": "",
-  "license": ""
+    "factory-method": "tsc src/FactoryMethod/index.ts --lib es2015,dom && node src/FactoryMethod/index.js",
+    "abstract-factory": "tsc src/AbstractFactory/index.ts --lib es2015,dom && node src/AbstractFactory/index.js",
+    "builder": "tsc src/Builder/index.ts --lib es2015,dom && node src/Builder/index.js",
+    "prototype": "tsc src/Prototype/index.ts --lib es2015,dom && node src/Prototype/index.js",
+    "singleton": "tsc src/Singleton/index.ts --lib es2015,dom && node src/Singleton/index.js",
+    "decorator": "tsc src/Decorator/index.ts --lib es2015,dom && node src/Decorator/index.js",
+    "flyweight": "tsc src/Flyweight/index.ts --lib es2015,dom && node src/Flyweight/index.js"
+  }
 }

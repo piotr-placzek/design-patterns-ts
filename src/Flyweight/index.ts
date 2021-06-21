@@ -184,3 +184,12 @@ export class MineSweeperBoard {
         );
     }
 }
+
+/** USAGE */
+
+const msBoard = new MineSweeperBoard(5, [
+    { x: 2, y: 2 },
+    { x: 3, y: 2 },
+    { x: 3, y: 3 }
+]);
+msBoard.print();

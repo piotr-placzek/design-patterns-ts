@@ -1,15 +1,15 @@
 /** https://refactoring.guru/pl/design-patterns/factory-method */
 
 export interface Transport {
-    deliver: Function;
+    deliver(): string;
 }
 
 export class Truck implements Transport {
-    deliver(): void { }
+    deliver(): string { return "Truck"; }
 }
 
 export class Ship implements Transport {
-    deliver(): void { }
+    deliver(): string { return "Ship"; }
 }
 
 export abstract class Logistics {
@@ -24,3 +24,17 @@ export class RoadLogistics extends Logistics {
 export class SeaLogistics extends Logistics {
     createTransport(): Transport { return new Ship(); }
 }
+
+/** USAGE */
+
+function factoryMethodClient(method: Logistics): Transport {
+    return method.createTransport();
+}
+
+console.log(
+    factoryMethodClient(new RoadLogistics()).deliver()
+);
+
+console.log(
+    factoryMethodClient(new SeaLogistics()).deliver()
+);

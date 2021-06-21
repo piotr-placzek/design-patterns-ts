@@ -113,3 +113,14 @@ export class Director {
         return builder.getResult();
     }
 }
+
+/** USAGE */
+
+const plainTextBuilder = new PlainTextDocumentBuilder();
+const plainTextDocument = new Director().createExampleDocument(plainTextBuilder).text();
+console.log(plainTextDocument);
+
+
+const htmlTextBuilder = new HtmlTextDocumentBuilder();
+const htmlTextDocument = new Director().createExampleDocument(htmlTextBuilder).text();
+console.log(htmlTextDocument);

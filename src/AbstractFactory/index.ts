@@ -17,9 +17,9 @@ export class ModernCoffeeTable implements CoffeeTable {}
 export class ArtDecoCoffeeTable implements CoffeeTable {}
 
 export default interface FurnitureFactory {
-    createChair: Function;
-    createSofa: Function;
-    createCoffeeTable: Function;
+    createChair(): Chair;
+    createSofa(): Sofa;
+    createCoffeeTable(): CoffeeTable;
 }
 
 export class VictorianFurnitureFactory implements FurnitureFactory {
@@ -39,3 +39,28 @@ export class ArtDecoFurnitureFactory implements FurnitureFactory {
     createSofa(): ArtDecoSofa { return new ArtDecoSofa(); }
     createCoffeeTable(): ArtDecoCoffeeTable { return new ArtDecoCoffeeTable(); }
 }
+
+/** USAGE */
+
+function abstractFactoryClient(factory: FurnitureFactory): {
+    chair: Chair,
+    sofa: Sofa,
+    coffeeTable: CoffeeTable
+} {
+    const chair = factory.createChair();
+    const sofa = factory.createSofa();
+    const coffeeTable = factory.createCoffeeTable();
+    return { chair, sofa, coffeeTable }
+}
+
+console.log(
+abstractFactoryClient(new VictorianFurnitureFactory())
+);
+
+console.log(
+    abstractFactoryClient(new ModernFurnitureFactory())
+);
+
+console.log(
+    abstractFactoryClient(new ArtDecoFurnitureFactory())
+);

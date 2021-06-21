@@ -15,3 +15,13 @@ export class Android {
     }
 
 }
+
+/** USAGE */
+
+const android_1 = new Android(["CPU 3.0", "MEM 32GB"], ["main.cpp"]);
+const android_2 = android_1.clone();
+android_2.software.push("LIB: IMPOSTOR")
+
+console.log(android_1 != android_2);
+console.log(android_1);
+console.log(android_2);
