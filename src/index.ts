@@ -13,8 +13,7 @@ factoryMethodClient(new SeaLogistics()).deliver();
 /** Abstract Factory */
 import FurnitureFactory, { ArtDecoFurnitureFactory, Chair, CoffeeTable, ModernFurnitureFactory, Sofa, VictorianFurnitureFactory } from "./AbstractFactory";
 
-function abstractFactoryClient(factory: FurnitureFactory):
-{
+function abstractFactoryClient(factory: FurnitureFactory): {
     chair: Chair,
     sofa: Sofa,
     coffeeTable: CoffeeTable
@@ -22,7 +21,7 @@ function abstractFactoryClient(factory: FurnitureFactory):
     const chair = factory.createChair();
     const sofa = factory.createSofa();
     const coffeeTable = factory.createCoffeeTable();
-    return {chair, sofa, coffeeTable}
+    return { chair, sofa, coffeeTable }
 }
 
 abstractFactoryClient(new VictorianFurnitureFactory());
@@ -56,12 +55,21 @@ const equal = (singletonInstance_1 === singletonInstance_2);
 
 
 /** Adapter */
-/** Bridge */
+/** Bridge+ */
 /** Composite */
-/** Decorator */
+
+/** Decorator+ */
+import { Matrix, Vector, MutipliedValueGetterMatrixDecorator } from "./Decorator";
+
+const vs: number = 3;
+let vector: Matrix = new Vector(vs);
+for (let v = 0; v < vs; v++) vector.set(v, 0, v);
+vector = new MutipliedValueGetterMatrixDecorator(3, vector);
+
+
 /** Facade */
-/** Flyweight */
-/** Proxy */
+/** Flyweight+ */
+/** Proxy+ */
 
 /** Chain of Responsibility */
 /** Command */
