@@ -27,7 +27,7 @@
 
     "adapter": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
     "composite": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
-    "facade": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
+    "facade": "tsc src/Facade/index.ts --lib es2015,dom && node src/Facade/index.js",
     "mediator": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
     "memento": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
     "state": "tsc src/.placeholder/index.ts --lib es2015,dom && node src/.placeholder/index.js",
