@@ -131,7 +131,6 @@ export class UniversalMatrixDecorator extends MatrixDecorator {
 }
 
 /** USAGE */
-
 export function main(): void {
     const vs: number = 3;
     let vector: Matrix = new Vector(vs);

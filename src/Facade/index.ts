@@ -64,7 +64,8 @@ export class Facade {
 }
 
 /** USAGE */
-
-const system: Facade = new Facade();
-const uuid: string = system.crateOrder();
-console.log(system.trackOrder(uuid));
+export function main(): void {
+    const system: Facade = new Facade();
+    const uuid: string = system.crateOrder();
+    console.log(system.trackOrder(uuid));
+}

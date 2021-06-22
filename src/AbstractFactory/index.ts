@@ -41,26 +41,27 @@ export class ArtDecoFurnitureFactory implements FurnitureFactory {
 }
 
 /** USAGE */
-
-function abstractFactoryClient(factory: FurnitureFactory): {
-    chair: Chair,
-    sofa: Sofa,
-    coffeeTable: CoffeeTable
-} {
-    const chair = factory.createChair();
-    const sofa = factory.createSofa();
-    const coffeeTable = factory.createCoffeeTable();
-    return { chair, sofa, coffeeTable }
+export function main(): void {
+    function abstractFactoryClient(factory: FurnitureFactory): {
+        chair: Chair,
+        sofa: Sofa,
+        coffeeTable: CoffeeTable
+    } {
+        const chair = factory.createChair();
+        const sofa = factory.createSofa();
+        const coffeeTable = factory.createCoffeeTable();
+        return { chair, sofa, coffeeTable }
+    }
+    
+    console.log(
+    abstractFactoryClient(new VictorianFurnitureFactory())
+    );
+    
+    console.log(
+        abstractFactoryClient(new ModernFurnitureFactory())
+    );
+    
+    console.log(
+        abstractFactoryClient(new ArtDecoFurnitureFactory())
+    );
 }
-
-console.log(
-abstractFactoryClient(new VictorianFurnitureFactory())
-);
-
-console.log(
-    abstractFactoryClient(new ModernFurnitureFactory())
-);
-
-console.log(
-    abstractFactoryClient(new ArtDecoFurnitureFactory())
-);

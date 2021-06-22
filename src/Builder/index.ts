@@ -115,12 +115,13 @@ export class Director {
 }
 
 /** USAGE */
+export function main(): void {
+    const plainTextBuilder = new PlainTextDocumentBuilder();
+    const plainTextDocument = new Director().createExampleDocument(plainTextBuilder)    .text();
+    console.log(plainTextDocument);
 
-const plainTextBuilder = new PlainTextDocumentBuilder();
-const plainTextDocument = new Director().createExampleDocument(plainTextBuilder).text();
-console.log(plainTextDocument);
 
-
-const htmlTextBuilder = new HtmlTextDocumentBuilder();
-const htmlTextDocument = new Director().createExampleDocument(htmlTextBuilder).text();
-console.log(htmlTextDocument);
+    const htmlTextBuilder = new HtmlTextDocumentBuilder();
+    const htmlTextDocument = new Director().createExampleDocument(htmlTextBuilder). text();
+    console.log(htmlTextDocument);
+}

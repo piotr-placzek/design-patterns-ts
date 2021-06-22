@@ -26,15 +26,16 @@ export class SeaLogistics extends Logistics {
 }
 
 /** USAGE */
-
-function factoryMethodClient(method: Logistics): Transport {
-    return method.createTransport();
+export function main(): void {
+    function factoryMethodClient(method: Logistics): Transport {
+        return method.createTransport();
+    }
+    
+    console.log(
+        factoryMethodClient(new RoadLogistics()).deliver()
+    );
+    
+    console.log(
+        factoryMethodClient(new SeaLogistics()).deliver()
+    );
 }
-
-console.log(
-    factoryMethodClient(new RoadLogistics()).deliver()
-);
-
-console.log(
-    factoryMethodClient(new SeaLogistics()).deliver()
-);
