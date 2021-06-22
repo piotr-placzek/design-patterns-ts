@@ -1,9 +1,11 @@
 /** https://refactoring.guru/pl/design-patterns/facade */
 
+import { createUuid, UUID } from "../.common";
+
 export class ParcelsSystem {
     private arr: string[] = []
 
-    add(uuid: string): number {
+    add(uuid: UUID): number {
         if(this.search(uuid) > -1) return -1;
 
         this.arr.push(uuid);
@@ -11,19 +13,14 @@ export class ParcelsSystem {
         return this.arr.length - 1;
     }
 
-    search(uuid: string): number {
+    search(uuid: UUID): number {
         return this.arr.indexOf(uuid);
     }
 }
 
 export class OrderingSystem {
-    createOrder(): string {
-        const time: number = new Date().getTime();
-        const uuid: string = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx';
-        return uuid.replace(/[xy]/g, (c: string): string => {
-            const r: number = (time + Math.random() * 16) % 16 | 0;
-            return c == 'x' ? r.toString() : (r & 0x3 | 0x8).toString(16);
-        });
+    createOrder(): UUID {
+        return createUuid();
     }
 }
 
@@ -31,7 +28,7 @@ export class TrackingSystem {
 
     constructor(private readonly parcels: ParcelsSystem) {}
 
-    track(uuid: string): number {
+    track(uuid: UUID): number {
         return this.parcels.search(uuid);
     }
 }
@@ -41,7 +38,7 @@ export class Facade {
     private orders: OrderingSystem = new OrderingSystem();
     private tracks: TrackingSystem = new TrackingSystem(this.parcels);
 
-    crateOrder(): string {
+    crateOrder(): UUID {
         const uuid: string = this.orders.createOrder();
         const index: number = this.parcels.add(uuid);
         if(index < 0) {
@@ -52,7 +49,7 @@ export class Facade {
         }
     }
 
-    trackOrder(uuid: string): string {
+    trackOrder(uuid: UUID): string {
         const index: number = this.tracks.track(uuid);
         if(index > -1){
             return `You are ${index+1} in the queue.`
@@ -66,6 +63,6 @@ export class Facade {
 /** USAGE */
 export function main(): void {
     const system: Facade = new Facade();
-    const uuid: string = system.crateOrder();
+    const uuid: UUID = system.crateOrder();
     console.log(system.trackOrder(uuid));
 }
