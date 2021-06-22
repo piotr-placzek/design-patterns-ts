@@ -132,22 +132,24 @@ export class UniversalMatrixDecorator extends MatrixDecorator {
 
 /** USAGE */
 
-const vs: number = 3;
-let vector: Matrix = new Vector(vs);
-for (let v = 0; v < vs; v++) vector.set(v, 0, v);
-const mdec = new MutipliedValueGetterMatrixDecorator(3, vector);
-const udec = new UniversalMatrixDecorator(vector);
-udec.setGetFunc(
-    (x: number, y:number): number => {
-        return udec.source().get(x, y) -1;
-    }
-)
+export function main(): void {
+    const vs: number = 3;
+    let vector: Matrix = new Vector(vs);
+    for (let v = 0; v < vs; v++) vector.set(v, 0, v);
+    const mdec = new MutipliedValueGetterMatrixDecorator(3, vector);
+    const udec = new UniversalMatrixDecorator(vector);
+    udec.setGetFunc(
+        (x: number, y:number): number => {
+            return udec.source().get(x, y) -1;
+        }
+    )
 
-console.log("sorce vector");
-vector.print();
+    console.log("sorce vector");
+    vector.print();
 
-console.log("multiplied vector");
-mdec.print();
+    console.log("multiplied vector");
+    mdec.print();
 
-console.log("univesral decorator");
-udec.print();
+    console.log("univesral decorator");
+    udec.print();
+}
