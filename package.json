@@ -25,7 +25,7 @@
     "strategy": "tsc src/Strategy/index.ts --lib es2021,dom && node -e 'require(\"./src/Strategy/index.js\").main()'",
     "visitor": "tsc src/.placeholder/index.ts --lib es2021,dom && node -e 'require(\"./src/.placeholder/index.js\").main()'",
 
-    "adapter": "tsc src/Adapter/index.ts --lib es2016,dom && node -e 'require(\"./src/Adapter/index.js\").main()'",
+    "adapter": "tsc src/Adapter/index.ts --lib es2021,dom && node -e 'require(\"./src/Adapter/index.js\").main()'",
     "composite": "tsc src/.placeholder/index.ts --lib es2021,dom && node -e 'require(\"./src/.placeholder/index.js\").main()'",
     "facade": "tsc src/Facade/index.ts --lib es2021,dom && node -e 'require(\"./src/Facade/index.js\").main()'",
     "mediator": "tsc src/.placeholder/index.ts --lib es2021,dom && node -e 'require(\"./src/.placeholder/index.js\").main()'",
