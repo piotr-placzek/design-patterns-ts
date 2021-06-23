@@ -23,7 +23,7 @@
     "observer": "tsc src/Observer/index.ts --lib es2021,dom && node -e 'require(\"./src/Observer/index.js\").main()'",
     "command": "tsc src/Command/index.ts --lib es2021,dom && node -e 'require(\"./src/Command/index.js\").main()'",
     "strategy": "tsc src/Strategy/index.ts --lib es2021,dom && node -e 'require(\"./src/Strategy/index.js\").main()'",
-    "visitor": "tsc src/.placeholder/index.ts --lib es2021,dom && node -e 'require(\"./src/.placeholder/index.js\").main()'",
+    "visitor": "tsc src/Visitor/index.ts --lib es2021,dom && node -e 'require(\"./src/Visitor/index.js\").main()'",
 
     "adapter": "tsc src/Adapter/index.ts --lib es2021,dom && node -e 'require(\"./src/Adapter/index.js\").main()'",
     "composite": "tsc src/Composite/index.ts --lib es2021,dom && node -e 'require(\"./src/Composite/index.js\").main()'",
