@@ -8,3 +8,7 @@ export function createUuid(): UUID {
         return c == 'x' ? r.toString() : (r & 0x3 | 0x8).toString(16);
     });
 }
+
+export function randomNumberFromRange(min: number, max: number): number {
+    return Math.random() * (max - min) + min;
+}

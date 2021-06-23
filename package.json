@@ -22,7 +22,7 @@
     "iterator": "tsc src/Iterator/index.ts --lib es2015,dom && node -e 'require(\"./src/Iterator/index.js\").main()'",
     "observer": "tsc src/Observer/index.ts --lib es2015,dom && node -e 'require(\"./src/Observer/index.js\").main()'",
     "command": "tsc src/.placeholder/index.ts --lib es2015,dom && node -e 'require(\"./src/.placeholder/index.js\").main()'",
-    "strategy": "tsc src/.placeholder/index.ts --lib es2015,dom && node -e 'require(\"./src/.placeholder/index.js\").main()'",
+    "strategy": "tsc src/Strategy/index.ts --lib es2015,dom && node -e 'require(\"./src/Strategy/index.js\").main()'",
     "visitor": "tsc src/.placeholder/index.ts --lib es2015,dom && node -e 'require(\"./src/.placeholder/index.js\").main()'",
 
     "adapter": "tsc src/.placeholder/index.ts --lib es2015,dom && node -e 'require(\"./src/.placeholder/index.js\").main()'",
