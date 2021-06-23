@@ -26,7 +26,7 @@
     "visitor": "tsc src/.placeholder/index.ts --lib es2021,dom && node -e 'require(\"./src/.placeholder/index.js\").main()'",
 
     "adapter": "tsc src/Adapter/index.ts --lib es2021,dom && node -e 'require(\"./src/Adapter/index.js\").main()'",
-    "composite": "tsc src/.placeholder/index.ts --lib es2021,dom && node -e 'require(\"./src/.placeholder/index.js\").main()'",
+    "composite": "tsc src/Composite/index.ts --lib es2021,dom && node -e 'require(\"./src/Composite/index.js\").main()'",
     "facade": "tsc src/Facade/index.ts --lib es2021,dom && node -e 'require(\"./src/Facade/index.js\").main()'",
     "mediator": "tsc src/.placeholder/index.ts --lib es2021,dom && node -e 'require(\"./src/.placeholder/index.js\").main()'",
     "memento": "tsc src/.placeholder/index.ts --lib es2021,dom && node -e 'require(\"./src/.placeholder/index.js\").main()'",
